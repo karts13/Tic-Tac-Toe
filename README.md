@@ -13,7 +13,7 @@
 # Tic-Tac-Toe
 
 ## Description
-> An easy-to-use, interactive game experience is offered by this C++ program *Tic-Tac-Toe* , which applies object-oriented ideas. It makes use of classes, functions, > and random number generation. The game has two modes:
+> An easy-to-use, interactive game experience is offered by this C++ program *Tic-Tac-Toe* , which applies object-oriented ideas. It makes use of classes, functions, and random number generation. The game has two modes:
 > 1. **Play Against a Human:** Two players enter their moves sequentially on the 3x3 game board in this mode. Players can start new games and the program keeps track of their scores.
 > 2. **Play Against the Computer:** In this mode, a lone player faces off against an artificially intelligent foe. The player attempts to win or earn a draw while the computer performs random moves.
 
@@ -36,3 +36,24 @@
 > * **Custom Symbols:** Instead of using the letters "X" and "O," players could use their own symbols (such as emojis or icons).
 > * **Board Size:** You can change the game to support larger or smaller game boards, such as 4x4 or 5x5 grids, by modifying the board size and victory condition logic appropriately.
 > * **Player profiles:** Customize the leaderboard to enable players to keep track of their game data, including their win-loss records and the number of games they've played.
+
+## Sample Outputs
+> ![Text Editor](https://github.com/karts13/Tic-Tac-Toe/assets/126340629/f4b801da-8d3b-4107-ba51-5462b5bf47c4)
+> :--:
+> <b>Text Editor</b>
+>  
+> ![Menu](https://github.com/karts13/Tic-Tac-Toe/assets/126340629/a941c4ee-193b-480a-9667-d8fbb51d7e58)
+> :--:
+> <b>TicTacToe Menu</b>
+> 
+> ![vsHuman](https://github.com/karts13/Tic-Tac-Toe/assets/126340629/af60ce65-9153-45b4-b555-9d1c156d6f4c)
+> :--:
+> <b>Play against Human</b>
+> 
+> ![Leaderboard](https://github.com/karts13/Tic-Tac-Toe/assets/126340629/f26d28e8-8529-4f27-b8d3-40077a9f839b)
+> :--:
+> <b>Leaderboard</b>
+> 
+> ![vsComputer](https://github.com/karts13/Tic-Tac-Toe/assets/126340629/8306f2dc-5cf7-4748-9fdf-0bcc838ff305)
+> :--:
+> <b>Play against Computer</b>
