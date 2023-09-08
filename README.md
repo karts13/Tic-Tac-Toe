@@ -19,6 +19,16 @@
 
 ## How to Use this Code
 > 1. Create a new text file with a ".cpp" extension, e.g., `tictactoe.c`.
+> 2. Copy the code from [tictactoe.c](https://github.com/karts13/Tic-Tac-Toe/blob/main/tictactoe.cpp) repository and paste it into the text editor.
+> 3. Compile the code using a C++ compiler such as G++ (GNU C++ Compiler) or any other compilers.
+> 4. Do the necessary [customizations](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#customization).
+> 5. After successful compilation, an executable file named `tictactoe` will be generated. Run the compiled executable.
+> 6. Upon running the program, a menu will be displayed with two options shown in [Output 2]().
+> 7. Enter the number corresponding to your preferred mode and press Enter.
+> 8. To play the game depending on your selected option, follow to the prompts and directions given by the computer.
+>    * If you selected to play against a human, you will be prompted to enter player names and take turns making moves on the board.
+>    * If you selected to play against the computer, you will be prompted to enter your name and then play against the computer opponent.
+> 9. After each round, the application is going to ask if you'd want to begin a new game. You can opt to stop playing or keep going.
 
 
 ## Customization 
