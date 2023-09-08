@@ -23,7 +23,7 @@
 > 3. Compile the code using a C++ compiler such as G++ (GNU C++ Compiler) or any other compilers.
 > 4. Do the necessary [customizations](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#customization).
 > 5. After successful compilation, an executable file named `tictactoe` will be generated. Run the compiled executable.
-> 6. Upon running the program, a menu will be displayed with two options shown in [Output 2]().
+> 6. Upon running the program, a menu will be displayed with two options shown in [Output 2](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#sample-outputs).
 > 7. Enter the number corresponding to your preferred mode and press Enter.
 > 8. To play the game depending on your selected option, follow to the prompts and directions given by the computer.
 >    * If you selected to play against a human, you will be prompted to enter player names and take turns making moves on the board.
