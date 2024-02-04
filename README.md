@@ -1,6 +1,6 @@
 ## Personal details
 
-> **Name:** A Karthik Shneoy
+> **Name:** A Karthik Shenoy
 > 
 > **USN:** 4NM21CM002
 > 
