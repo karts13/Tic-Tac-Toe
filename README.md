@@ -16,7 +16,7 @@
 >    ```
 >    g++ tictactoe.cpp -o tictactoe
 >    ```
-> 4. After successful compilation, an executable file named `chrono` will be generated. Run the compiled executable
+> 4. After successful compilation, an executable file named `tictactoe` will be generated. Run the compiled executable
 >    ```
 >    ./tictactoe
 >    ```
