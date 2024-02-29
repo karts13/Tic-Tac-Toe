@@ -1,15 +1,3 @@
-## Personal details
-
-> **Name:** A Karthik Shenoy
-> 
-> **USN:** 4NM21CM002
-> 
-> Computer and Communication Engineering
-> 
-> N.M.A.M. Institute of Technology, Nitte
-> 
-> **Email:** karthishenoy2014@gmail.com
-
 # Tic-Tac-Toe
 
 ## Description
@@ -18,17 +6,26 @@
 > 2. **Play Against the Computer:** In this mode, a lone player faces off against an artificially intelligent foe. The player attempts to win or earn a draw while the computer performs random moves.
 
 ## How to Use this Code
-> 1. Create a new text file with a ".cpp" extension, e.g., `tictactoe.c`.
-> 2. Copy the code from [tictactoe.c](https://github.com/karts13/Tic-Tac-Toe/blob/main/tictactoe.cpp) repository and paste it into the text editor.
-> 3. Compile the code using a C++ compiler such as G++ (GNU C++ Compiler) or any other compilers.
-> 4. Do the necessary [customizations](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#customization).
-> 5. After successful compilation, an executable file named `tictactoe` will be generated. Run the compiled executable.
-> 6. Upon running the program, a menu will be displayed with two options shown in [Output 2](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#sample-outputs).
-> 7. Enter the number corresponding to your preferred mode and press Enter.
-> 8. To play the game depending on your selected option, follow to the prompts and directions given by the computer.
+> 1. Clone the Repository:
+>    ```
+>    git clone https://github.com/karts13/Tic-Tac-Toe.git
+>    cd Tic-Tac-Toe
+>    ```
+> 2. Do the necessary [customizations](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#customization).
+> 3. Compile the Code:
+>    ```
+>    g++ tictactoe.cpp -o tictactoe
+>    ```
+> 4. After successful compilation, an executable file named `chrono` will be generated. Run the compiled executable
+>    ```
+>    ./tictactoe
+>    ```
+> 5. Upon running the program, a menu will be displayed with two options shown in [Output 2](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#sample-outputs).
+> 6. Enter the number corresponding to your preferred mode and press Enter.
+> 7. To play the game depending on your selected option, follow to the prompts and directions given by the computer.
 >    * If you selected to play against a human, you will be prompted to enter player names and take turns making moves on the board.
 >    * If you selected to play against the computer, you will be prompted to enter your name and then play against the computer opponent.
-> 9. After each round, the application is going to ask if you'd want to begin a new game. You can opt to stop playing or keep going.
+> 8. After each round, the application is going to ask if you'd want to begin a new game. You can opt to stop playing or keep going.
 
 
 ## Customization 
@@ -57,3 +54,6 @@
 > ![vsComputer](https://github.com/karts13/Tic-Tac-Toe/assets/126340629/8306f2dc-5cf7-4748-9fdf-0bcc838ff305)
 > :--:
 > <b>Play against Computer</b>
+
+## Contributions 
+> If you find any issues or have suggestions for improvement, please open an issue or create a pull request.
