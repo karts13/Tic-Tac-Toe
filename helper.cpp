@@ -18,6 +18,7 @@ void playAgainstHuman(WINDOW * window) {
             while((ch = getch()) != '\n') {
                 player1.push_back(ch);
             }
+            wclear(window);
             waddstr(window, "Enter Player 2's name: ");
             wrefresh(window);
             while((ch = getch()) != '\n') {
@@ -37,7 +38,7 @@ void playAgainstHuman(WINDOW * window) {
             waddstr(window, currentPlayer1.c_str());
             waddstr(window, " (X), enter position (1-9): ");
             wrefresh(window);
-            position = getch() - 49;
+            position = getch() - 48;
             if (position >= 1 && position <= 9 && game.makeMove(position)) {
                 char winner = game.checkWinner();
                 if(winner != ' ') {
@@ -62,7 +63,7 @@ void playAgainstHuman(WINDOW * window) {
             waddstr(window, currentPlayer2.c_str());
             waddstr(window, " (O), enter position (1-9): ");
             wrefresh(window);
-            position = getch() - 49;
+            position = getch() - 48;
             if (position >= 1 && position <= 9 && game.makeMove(position)) {
                 char winner = game.checkWinner();
                 if(winner != ' ') {
@@ -94,6 +95,8 @@ void playAgainstHuman(WINDOW * window) {
             newGameChoice.push_back(ch);
         }
         if(newGameChoice != "yes") {
+            wclear(window);
+            wrefresh(window);
             break;
         }
     }
@@ -121,10 +124,12 @@ void playAgainstComputer(WINDOW *window) {
         game.printBoard(window);
         wprintw(window, "%s (X), enter position (1-9): ", game.getPlayer1Name().c_str());
         wrefresh(window);
-        position = getch() - 49;
+        position = getch() - 48;
         if(position >= 1 && position <= 9 && game.makeMove(position)) {
             char winner = game.checkWinner();
             if(winner != ' ') {
+                wclear(window);
+                wrefresh(window);
                 if(winner == 'X') {
                     wprintw(window, "%s wins!\n", game.getPlayer1Name().c_str());
                     wrefresh(window);
@@ -134,6 +139,8 @@ void playAgainstComputer(WINDOW *window) {
                 }
                 break;
             } else if(game.isBoardFull()) {
+                wclear(window);
+                wrefresh(window);
                 waddstr(window, "It's a draw!\n");
                 wrefresh(window);
                 break;
@@ -150,6 +157,8 @@ void playAgainstComputer(WINDOW *window) {
 
         char winner = game.checkWinner();
         if(winner != ' ') {
+            wclear(window);
+            wrefresh(window);
             if(winner == 'X') {
                 wprintw(window, "%s wins!\n", game.getPlayer1Name().c_str());
                 wrefresh(window);
