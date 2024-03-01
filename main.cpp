@@ -20,7 +20,6 @@ int main() {
         playAgainstHuman(stdscr);
     } else if(choice == 50) {
         playAgainstComputer(stdscr);
-        getch();
     } else {
         waddstr(stdscr, "Invalid choice. Please choose 1 or 2.\n");
         wrefresh(stdscr);
