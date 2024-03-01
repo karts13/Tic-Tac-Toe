@@ -53,34 +53,41 @@ void playAgainstHuman(WINDOW * window) {
                     break;
                 }
             } else {
-                waddstr(window, "Invalid move. Try again.\n");
+                waddstr(window, "\n\nInvalid move. Try again.\n");
+                waddstr(window, "Press any key to continue...");
                 wrefresh(window);
+                getch();
+                continue;
             }
 
-            wclear(window);
-            waddstr(window, "Current board:\n");
-            game.printBoard(window);
-            waddstr(window, currentPlayer2.c_str());
-            waddstr(window, " (O), enter position (1-9): ");
-            wrefresh(window);
-            position = getch() - 48;
-            if (position >= 1 && position <= 9 && game.makeMove(position)) {
-                char winner = game.checkWinner();
-                if(winner != ' ') {
-                    waddstr(window, currentPlayer2.c_str());
-                    waddstr(window, " wins!\n");
-                    wrefresh(window);
-                    player2Score++;
-                    break;
-                } else if(game.isBoardFull()) {
-                    waddstr(window, "It's a draw!\n");
-                    wrefresh(window);
-                    break;
-                }
-            } else {
-                waddstr(window, "Invalid move. Try again.\n");
+            reset:
+                wclear(window);
+                waddstr(window, "Current board:\n");
+                game.printBoard(window);
+                waddstr(window, currentPlayer2.c_str());
+                waddstr(window, " (O), enter position (1-9): ");
                 wrefresh(window);
-            }
+                position = getch() - 48;
+                if (position >= 1 && position <= 9 && game.makeMove(position)) {
+                    char winner = game.checkWinner();
+                    if(winner != ' ') {
+                        waddstr(window, currentPlayer2.c_str());
+                        waddstr(window, " wins!\n");
+                        wrefresh(window);
+                        player2Score++;
+                        break;
+                    } else if(game.isBoardFull()) {
+                        waddstr(window, "It's a draw!\n");
+                        wrefresh(window);
+                        break;
+                    }
+                } else {
+                    waddstr(window, "\n\nInvalid move. Try again.\n");
+                    waddstr(window, "Press any key to continue...");
+                    wrefresh(window);
+                    getch();
+                    goto reset;
+                }
         }
 
         // Display points after each game
@@ -132,9 +139,11 @@ void playAgainstComputer(WINDOW *window) {
                 wrefresh(window);
                 if(winner == 'X') {
                     wprintw(window, "%s wins!\n", game.getPlayer1Name().c_str());
+                    wprintw(window, "Press any key to exit...");
                     wrefresh(window);
                 } else {
                     wprintw(window, "%s wins!\n", game.getPlayer2Name().c_str());
+                    wprintw(window, "Press any key to exit...");
                     wrefresh(window);
                 }
                 break;
@@ -146,8 +155,11 @@ void playAgainstComputer(WINDOW *window) {
                 break;
             }
         } else {
-            waddstr(window, "Invalid move. Try again.\n");
+            waddstr(window, "\n\nInvalid move. Try again.\n");
+            waddstr(window, "Press any key to continue...");
             wrefresh(window);
+            getch();
+            continue;
         }
 
         // Computer's turn (random move)
@@ -161,9 +173,11 @@ void playAgainstComputer(WINDOW *window) {
             wrefresh(window);
             if(winner == 'X') {
                 wprintw(window, "%s wins!\n", game.getPlayer1Name().c_str());
+                wprintw(window, "Press any key to exit...");
                 wrefresh(window);
             } else {
                 wprintw(window, "%s wins!\n", game.getPlayer2Name().c_str());
+                wprintw(window, "Press any key to exit...");
                 wrefresh(window);
             }
             break;
