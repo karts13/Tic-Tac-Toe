@@ -146,6 +146,7 @@ void playAgainstComputer(WINDOW *window) {
                     wprintw(window, "Press any key to exit...");
                     wrefresh(window);
                 }
+                getch();
                 break;
             } else if(game.isBoardFull()) {
                 wclear(window);
@@ -180,6 +181,7 @@ void playAgainstComputer(WINDOW *window) {
                 wprintw(window, "Press any key to exit...");
                 wrefresh(window);
             }
+            getch();
             break;
         }
     }
