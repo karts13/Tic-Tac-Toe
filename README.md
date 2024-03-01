@@ -14,7 +14,7 @@
 > 2. Do the necessary [customizations](https://github.com/karts13/Tic-Tac-Toe/blob/main/README.md#customization).
 > 3. Compile the Code:
 >    ```
->    g++ tictactoe.cpp -o tictactoe
+>    make
 >    ```
 > 4. After successful compilation, an executable file named `tictactoe` will be generated. Run the compiled executable
 >    ```
