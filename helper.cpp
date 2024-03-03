@@ -1,4 +1,4 @@
-#include "helper.h"
+#include "helper.hpp"
 #include "tictactoe.h"
 
 void playAgainstHuman(WINDOW * window) {
