@@ -7,7 +7,7 @@
 
 class Menu {
     public:
-        Menu(std::vector<std::string> items);
+        Menu(std::string title, std::vector<std::string> items);
         ~Menu();
         void print_menu();
         std::string menu_navigation();
@@ -18,6 +18,7 @@ class Menu {
         std::vector<std::string> menuItems;
         int selectedItem;
         int height, width, start_y, start_x;
+        std::string winTitle;
         void calculate_window_dimensions();
         int longest_menu_item();
 };

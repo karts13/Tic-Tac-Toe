@@ -6,8 +6,9 @@
 #include "menu.hpp"
 
 int main() {
+    std::string title = "Tic Tac Toe";
     std::vector<std::string> items = {"Play against a human", "Play against the computer", "Exit"};
-    Menu *menu = new Menu(items);
+    Menu *menu = new Menu(title, items);
     std::string choice = menu->menu_navigation();
     delete menu;
     
