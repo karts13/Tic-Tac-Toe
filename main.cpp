@@ -2,29 +2,30 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include "helper.h"
+#include "helper.hpp"
+#include "menu.hpp"
 
 int main() {
-    int choice;
-    initscr();
+    std::vector<std::string> items = {"Play against a human", "Play against the computer", "Exit"};
+    Menu *menu = new Menu(items);
+    std::string choice = menu->menu_navigation();
+    delete menu;
     
-    waddstr(stdscr, "Welcome to Tic-Tac-Toe!\n");
-    waddstr(stdscr, "Choose an option:\n");
-    waddstr(stdscr, "1. Play against a human\n");
-    waddstr(stdscr, "2. Play against the computer\n");
-    waddstr(stdscr, "Enter your choice (1 or 2): ");
-    wrefresh(stdscr);
-    choice = getch();
-
-    if(choice == 49) {
+    initscr();
+    echo();
+    curs_set(1);
+    if(choice == items.at(0)) {
         playAgainstHuman(stdscr);
-    } else if(choice == 50) {
+    } else if(choice == items.at(1)) {
         playAgainstComputer(stdscr);
+    } else if(choice == items.at(2)) {
+        waddstr(stdscr, "Goodbye!\n");
+        wrefresh(stdscr);
+        endwin();
     } else {
         waddstr(stdscr, "Invalid choice. Please choose 1 or 2.\n");
         wrefresh(stdscr);
     }
-
     endwin();
 
     return 0;
